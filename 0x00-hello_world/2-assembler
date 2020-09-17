@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -o $CFILE name=$(echo "$CFILE" | cut -f 1 -d '.').s
+as -o $CFILE NAME=$(echo "$CFILE" | cut -f 1 -d '.').s
