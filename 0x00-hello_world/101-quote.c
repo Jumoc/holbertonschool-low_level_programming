@@ -6,12 +6,6 @@
  */
 int main(void)
 {
-	char text[59]  = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	int i = 0;
-	while(i < sizeof(text))
-	{
-		putchar(text[i]);
-		i++;
-	}
+	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 	return (1);
 }
