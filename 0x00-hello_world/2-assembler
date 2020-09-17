@@ -1,2 +1,2 @@
 #!/bin/bash
-as -o $CFILE NAME=$(echo "$CFILE" | cut -f 1 -d '.').s
+gcc -o $CFILE > ${CFILE%.*}.s
