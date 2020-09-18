@@ -3,7 +3,12 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**  
+ * main - main function
+ * 
+ * Description: prints if a number is positive, negative or zero
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
