@@ -3,9 +3,9 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/**  
+/**
  * main - main function
- * 
+ *
  * Description: prints if a number is positive, negative or zero
  * Return: 0
  */
