@@ -3,12 +3,11 @@ int _putchar(char);
 /**
  * main - main function
  *
- * Return: On success 1.
+ * Return: On success 0.
  */
 
 int main(void)
 {
-
 	char name[10] = "Holberton\n";
 	int i = 0;
 
