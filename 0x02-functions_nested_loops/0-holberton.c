@@ -1,4 +1,4 @@
-int _putchar(char);
+#include "holberton.h"
 
 /**
  * main - main function
@@ -19,4 +19,3 @@ int main(void)
 
 	return (0);
 }
-
