@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_diagonal - prints a diagonal line
+ * print_square - prints a diagonal line
  *
  * @size: size of the square
  */
