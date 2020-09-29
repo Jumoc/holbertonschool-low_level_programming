@@ -1,21 +1,23 @@
 #include "holberton.h"
 
 /**
- * swap_int - swaps the value of two integers
+ * _strlen - returns the size of a string
  *
  * @s: string to be counted
+ *
+ * Return: the size of the string
  */
 
 int _strlen(char *s)
-{	
+{
 	int i = 0;
 
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
 
-	return(i);
+	return (i);
 
 }
 
@@ -26,10 +28,10 @@ int _strlen(char *s)
  */
 
 void print_rev(char *s)
-{	
+{
 	int i = _strlen(s);
-	
-	while(i >= 0)
+
+	while (i >= 0)
 	{
 		_putchar(s[i]);
 		i--;
