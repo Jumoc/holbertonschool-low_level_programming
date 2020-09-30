@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
- * _strlen - returns the size of a string
+ * length - returns the size of a string
  *
  * @s: string to be counted
  *
  * Return: the size of the string
  */
 
-int _strlen(char *s)
+int length(char *s)
 {
 	int i = 0;
 
@@ -29,7 +29,7 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	int size = _strlen(str);
+	int size = length(str);
 	int half;
 
 	if (size % 2 == 0)
