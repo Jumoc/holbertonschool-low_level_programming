@@ -9,15 +9,14 @@
 void puts_half(char *str)
 {
 
-	int i = 0;
+	int i, j, size, half;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
 
-	int size = i;
-	int half;
+	size = i;
 
 	if (size % 2 == 0)
 	{
@@ -30,8 +29,6 @@ void puts_half(char *str)
 		half =  (size - 1) / 2;
 
 	}
-
-	int j;
 
 	for (j = half; j < size; j++)
 	{
