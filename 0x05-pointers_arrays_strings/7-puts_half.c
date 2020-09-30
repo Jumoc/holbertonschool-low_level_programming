@@ -1,27 +1,6 @@
 #include "holberton.h"
 
 /**
- * length - returns the size of a string
- *
- * @s: string to be counted
- *
- * Return: the size of the string
- */
-
-int length(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-
-	return (i);
-
-}
-
-/**
  * puts_half - prints half of a string
  *
  * @str: string to be printed
@@ -29,7 +8,15 @@ int length(char *s)
 
 void puts_half(char *str)
 {
-	int size = length(str);
+
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+
+	int size = i;
 	int half;
 
 	if (size % 2 == 0)
