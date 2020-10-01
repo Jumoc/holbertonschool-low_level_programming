@@ -12,8 +12,8 @@
 char *_strcat(char *dest, char *src)
 {
 	char *first = dest;
-       
-	while(*dest != '\0')
+
+	while (*dest != '\0')
 	{
 		dest++;
 	}
@@ -21,6 +21,7 @@ char *_strcat(char *dest, char *src)
 	for ( ; *src != '\0'; src++)
 	{
 		*dest = *src;
+		dest++;
 	}
 
 	return (first);
