@@ -1,12 +1,10 @@
 #include "holberton.h"
 
 /**
- * *_strcmp - compares two strings
+ * reverse_array - reverses an array of integers
  *
- * @s1: string that gets concatenated src
- * @s2: string to be concatenated
- *
- * Return: 0 if equal, positive if s2 > s1 negative otherwise
+ * @a: pointer of the array
+ * @n: number of elements
  */
 
 void reverse_array(int *a, int n)
