@@ -15,7 +15,10 @@ char *cap_string(char *s)
 	while (s[size] != '\0')
 		size++;
 
-	while (i < size - 2)
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] = s[0] - ('a' - 'A');
+
+	while (i < size - 1)
 	{
 		if (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
 		   || s[i] == ',' || s[i] == ';' || s[i] == '.'
