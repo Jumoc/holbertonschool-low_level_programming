@@ -1,21 +1,22 @@
 #include "holberton.h"
 
 /**
- * reverse_array - reverses an array of integers
+ * *string_toupper - reverses an array of integers
  *
- * @a: pointer of the array
- * @n: number of elements
+ * @c: pointer of the string
+ *
+ * Return: the proccesed string
  */
 
 char *string_toupper(char *c)
 {
 	int i = 0;
 
-	while(c[i] != '\0')
+	while (c[i] != '\0')
 	{
 		if (i != 0)
 		{
-			if (c[i] == 'n' && c[i-1] == '\\')
+			if (c[i] == 'n' && c[i - 1] == '\\')
 			{
 				continue;
 			}
