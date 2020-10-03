@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * rev string - returns a string backwards
+ * rev_string - returns a string backwards
  *
  * @s: string to be converted
  */
@@ -25,10 +25,10 @@ void rev_string(char *s)
 		i++;
 		aux--;
 	}
-    
+
 	reversed[i] = '\0';
 
-	i = 0;	
+	i = 0;
 
 	while (s[i] != '\0')
 	{
