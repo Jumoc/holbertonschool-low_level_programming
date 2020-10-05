@@ -18,7 +18,7 @@ unsigned int _strspn(char *s, char *accept)
 		acount = count;
 		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if(s[i] == accept[j])
+			if (s[i] == accept[j])
 			{
 				count++;
 			}
@@ -26,7 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 
 		if (count == acount)
 		{
-			return(count);
+			return (count);
 		}
 	}
 
