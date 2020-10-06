@@ -1,9 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_chessboard - prints a chessboard
+ * print_diagsums - adds diagonals
  *
  * @a: matrix of chars
+ * @size: size of the matrix
  *
  * Return: void
  */
