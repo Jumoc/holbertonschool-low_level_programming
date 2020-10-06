@@ -1,12 +1,11 @@
 #include "holberton.h"
 
 /**
- * *_strstr - locates a character in a string
+ * print_chessboard - prints a chessboard
  *
- * @haystack: string to look into
- * @needle: character to look for
+ * @a: matrix of chars
  *
- * Return: counter of ocurrences
+ * Return: void
  */
 
 void print_chessboard(char (*a)[8])
