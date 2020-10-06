@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * *_strpbrk - locates a character in a string
+ * *_strstr - locates a character in a string
  *
- * @s: string to look into
- * @accept: character to look for
+ * @haystack: string to look into
+ * @needle: character to look for
  *
  * Return: counter of ocurrences
  */
@@ -30,10 +30,8 @@ char *_strstr(char *haystack, char *needle)
 				}
 				count++;
 				break;
-			} else 
-			{
-				count = 0;
 			}
+			count = 0;
 		}
 	}
 
