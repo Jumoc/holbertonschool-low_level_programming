@@ -14,7 +14,7 @@ int _sqrt_internal(int n, int aux)
 
 	if (n < 0)
 	{
-		return (-1);
+		return (n);
 	}
 
 	if (aux < 0)
