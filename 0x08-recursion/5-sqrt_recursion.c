@@ -12,19 +12,9 @@
 int _sqrt_internal(int n, int aux)
 {
 
-	if (n < 0)
+	if (aux < 0 || n < 0)
 	{
 		return (-1);
-	}
-
-	if (aux < 0)
-	{
-		return (-1);
-	}
-
-	if (n == 0)
-	{
-		return (0);
 	}
 
 	if (aux * aux == n)
