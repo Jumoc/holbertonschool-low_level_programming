@@ -19,7 +19,7 @@ int _sqrt_internal(int n, int aux)
 
 	if (aux < 0)
 	{
-		return (-1);
+		return (0);
 	}
 
 	if (n == 0 || aux == 0)
