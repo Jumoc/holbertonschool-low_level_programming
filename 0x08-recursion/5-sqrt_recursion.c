@@ -17,9 +17,10 @@ int _sqrt_internal(int n, int aux)
 	} else if ((aux * aux) == n)
 	{
 		return (aux);
-	}
-
+	} else
+	{
 	return (_sqrt_internal(n, aux + 1));
+	}
 }
 
 /**
