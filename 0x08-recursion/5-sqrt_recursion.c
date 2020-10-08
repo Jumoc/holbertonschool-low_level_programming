@@ -12,7 +12,7 @@
 int _sqrt_internal(int n, int aux)
 {
 
-	if (aux >= n)
+	if (aux <= n)
 	{
 		return (-1);
 	}
@@ -22,7 +22,7 @@ int _sqrt_internal(int n, int aux)
 		return (aux);
 	}
 
-	return (_sqrt_internal(n, aux + 1));
+	return (_sqrt_internal(n, aux - 1));
 }
 
 /**
@@ -43,5 +43,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	}
 
-	return (_sqrt_internal(n, 0));
+	return (_sqrt_internal(n, n));
 }
