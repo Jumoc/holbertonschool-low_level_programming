@@ -11,16 +11,14 @@
 
 int _sqrt_internal(int n, int aux)
 {
-	if (aux >= n || (aux * aux) > n)
+	if (aux >= n && (aux * aux) > n)
 	{
 		return (-1);
 	} else if ((aux * aux) == n)
 	{
 		return (aux);
-	} else
-	{
-	return (_sqrt_internal(n, aux + 1));
 	}
+	return (_sqrt_internal(n, aux + 1));
 }
 
 /**
