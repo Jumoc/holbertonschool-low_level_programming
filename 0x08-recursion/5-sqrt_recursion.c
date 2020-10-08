@@ -12,7 +12,7 @@
 int _sqrt_internal(int n, int aux)
 {
 
-	if (aux <= n)
+	if (aux < 0)
 	{
 		return (-1);
 	}
