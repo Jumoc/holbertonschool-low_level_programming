@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - main function 
- * 
+ * main - main function
+ *
  * @argc: amount of arguments
  * @argv: array of arguments
- * 
+ *
  * Return: 0 on success
  */
 
