@@ -14,7 +14,7 @@ int checkDigit(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (!(s[i] <= '9' && s[i] >= '0'))
+		if (!(s[i] <= '9' && s[i] >= '0') && s[i] != '-')
 		{
 			return (1);
 		}
@@ -53,6 +53,8 @@ int main(int argc, char *argv[])
 		{
 			if (sum == cents)
 			{
+				if (count < 0)
+					count *= -1;
 				printf("%d\n", count);
 				return (0);
 			}
