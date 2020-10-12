@@ -12,19 +12,18 @@
 
 int main(int argc, char *argv[])
 {
-	
-    int operacion = 0;
 
-    if (argc == 3)
-    {
-        operacion = atoi(argv[1]) * atoi(argv[2]);
-        printf("%d\n", operacion);
-    } else {
+	int operacion = 0;
 
-        printf("Error\n");
-        return (0);
-
-    }
+	if (argc == 3)
+	{
+		operacion = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", operacion);
+	} else
+	{
+		printf("Error\n");
+		return (0);
+	}
 
 	return (0);
 }
