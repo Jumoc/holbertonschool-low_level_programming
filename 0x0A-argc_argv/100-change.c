@@ -39,11 +39,6 @@ int main(int argc, char *argv[])
 
 	if (argc == 2)
 	{
-		if (checkDigit(argv[1]) == 1)
-		{
-			printf("Error\n");
-			return (1);
-		}
 		cents = atoi(argv[1]);
 		if (cents < 0)
 		{
@@ -53,8 +48,6 @@ int main(int argc, char *argv[])
 		{
 			if (sum == cents)
 			{
-				if (count < 0)
-					count *= -1;
 				printf("%d\n", count);
 				return (0);
 			}
