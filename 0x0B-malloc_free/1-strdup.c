@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -13,8 +14,10 @@ int sizePtr(char *str)
 {
 	int size = 0;
 
-	for (size = 0; str[size] != '\0'; size++)
+	while (str[size] != '\0')
+	{
 		size++;
+	}
 	return (size);
 }
 
@@ -37,7 +40,7 @@ char *_strdup(char *str)
 	}
 
 	size = sizePtr(str);
-	ptr = malloc(size * sizeof(char));
+	ptr = malloc(size * sizeof(char) + 1);
 
 	if (ptr == NULL)
 	{
