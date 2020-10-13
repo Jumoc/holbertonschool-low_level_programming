@@ -33,13 +33,17 @@ char *_strdup(char *str)
 	int size, i;
 
 	if (str == NULL)
+	{
 		return (NULL);
+	}
 
 	size = sizePtr(str);
-	ptr = malloc(size * sizeof(char) + 1);
+	ptr = malloc((size * sizeof(char)) + 1);
 
 	if (ptr == NULL)
+	{
 		return (NULL);
+	}
 
 	for (i = 0; str[i] != '\0'; i++)
 		ptr[i] = str[i];
