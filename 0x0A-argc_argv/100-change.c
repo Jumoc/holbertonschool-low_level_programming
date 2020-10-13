@@ -21,15 +21,11 @@ int main(int argc, char *argv[])
 		if (cents < 0)
 		{
 			printf("0\n");
+			return (0);
 		}
 		while (i < 5)
 		{
-			if (sum == cents)
-			{
-				printf("%d\n", count);
-				return (0);
-			}
-			if ((arr[i] + sum) < cents)
+			if ((arr[i] + sum) <= cents)
 			{
 				sum += arr[i];
 				count++;
@@ -43,5 +39,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
+	printf("%d\n", count);
+	return (0);
+
 	return (0);
 }
