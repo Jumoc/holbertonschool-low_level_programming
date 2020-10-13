@@ -36,7 +36,6 @@ char *_strdup(char *str)
 		return (NULL);
 
 	size = sizePtr(str);
-
 	ptr = malloc(size * sizeof(char));
 
 	if (ptr == NULL)
@@ -44,6 +43,5 @@ char *_strdup(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		ptr[i] = str[i];
-
 	return (ptr);
 }
