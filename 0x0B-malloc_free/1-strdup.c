@@ -12,13 +12,13 @@
 
 int sizePtr(char *str)
 {
-	int size;
+	int size = 0;
 
-	if (str == NULL)
-		return (NULL);
-	
-	for (size = 0; str[size] != '\0'; size++)
-		size++;
+	if (str != NULL)
+	{
+		for (size = 0; str[size] != '\0'; size++)
+			size++;
+	}
 	return (size);
 }
 
