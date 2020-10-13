@@ -38,14 +38,14 @@ char *_strdup(char *str)
 	}
 
 	size = sizePtr(str);
-	ptr = malloc((size + 1) * sizeof(char));
+	ptr = malloc(size * sizeof(char));
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i <= size - 1; i++)
+	for (i = 0; i <= size; i++)
 		ptr[i] = str[i];
 	return (ptr);
 }
