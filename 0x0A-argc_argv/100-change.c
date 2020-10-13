@@ -2,28 +2,6 @@
 #include <stdlib.h>
 
 /**
- * checkDigit - checks if a passed argument are numbers
- *
- * @s: amount of arguments
- *
- * Return: 0 on success
- */
-int checkDigit(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		if (!(s[i] <= '9' && s[i] >= '0') && s[i] != '-')
-		{
-			return (1);
-		}
-		i++;
-	}
-	return (0);
-}
-
-/**
  * main - main function
  *
  * @argc: amount of arguments
@@ -51,7 +29,7 @@ int main(int argc, char *argv[])
 				printf("%d\n", count);
 				return (0);
 			}
-			if (sum < cents && (arr[i] + sum) <= cents)
+			if ((arr[i] + sum) < cents)
 			{
 				sum += arr[i];
 				count++;
