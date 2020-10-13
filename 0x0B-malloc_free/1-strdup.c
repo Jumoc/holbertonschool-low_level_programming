@@ -14,6 +14,9 @@ int sizePtr(char *str)
 {
 	int size;
 
+	if (str == NULL)
+		return (NULL);
+	
 	for (size = 0; str[size] != '\0'; size++)
 		size++;
 	return (size);
