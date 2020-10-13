@@ -14,11 +14,8 @@ int sizePtr(char *str)
 {
 	int size = 0;
 
-	if (str != NULL)
-	{
-		for (size = 0; str[size] != '\0'; size++)
-			size++;
-	}
+	for (size = 0; str[size] != '\0'; size++)
+		size++;
 	return (size);
 }
 
@@ -39,7 +36,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	size = sizePtr(str);
-	ptr = malloc(size * sizeof(char));
+	ptr = malloc(size * sizeof(char) + 1);
 
 	if (ptr == NULL)
 		return (NULL);
