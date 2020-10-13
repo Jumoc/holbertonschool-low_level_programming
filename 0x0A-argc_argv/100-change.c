@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int arr[5] = {25, 10, 5, 2, 1};
-	int i = 0, sum = 0, count = 0, cents;
+	int i = 0, count = 0, cents;
 
 	if (argc == 2)
 	{
@@ -25,19 +25,20 @@ int main(int argc, char *argv[])
 		}
 		while (i < 5)
 		{
-			while ((arr[i] + sum) <= cents)
+			if ((cents - arr[i]) >= 0)
 			{
-				sum += arr[i];
+				cents -= arr[i];
 				count++;
+			} else
+			{
+				i++;
 			}
-			i++;
 		}
 	} else
 	{
 		printf("Error\n");
 		return (1);
 	}
-
 	printf("%d\n", count);
 	return (0);
 }
