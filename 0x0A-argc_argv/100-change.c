@@ -25,14 +25,12 @@ int main(int argc, char *argv[])
 		}
 		while (i < 5)
 		{
-			if ((arr[i] + sum) <= cents)
+			while ((arr[i] + sum) <= cents)
 			{
 				sum += arr[i];
 				count++;
-			} else
-			{
-				i++;
 			}
+			i++;
 		}
 	} else
 	{
@@ -41,7 +39,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d\n", count);
-	return (0);
-
 	return (0);
 }
