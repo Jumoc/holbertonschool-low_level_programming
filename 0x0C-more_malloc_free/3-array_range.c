@@ -29,10 +29,10 @@ int *array_range(int min, int max)
 		free(ptr);
 		return (NULL);
 	}
-	for (i = min; i <= max; i++)
+	for (i = 0; i < size + 1; i++)
 	{
-		ptr[j] = i;
-		j++;
+		ptr[i] = min;
+		min++;
 	}
 	return (ptr);
 
