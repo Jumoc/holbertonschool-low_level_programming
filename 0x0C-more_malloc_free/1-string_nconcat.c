@@ -24,48 +24,49 @@ int sizePtr(char *str)
 /**
  * string_nconcat - allocates memory
  *
- * @s1: size of the array
- * @s2: size of the array
- * @n: size of the array
+ * @s1: first string
+ * @s2: second string
+ * @n: number of bytes to concatenate
  *
- * Return: pointer to the allocated memory
+ * Return: pointer to the concatenated string
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-    unsigned int sizeS1 = 0, sizeS2 = 0, i, j;
+	unsigned int sizeS1 = 0, sizeS2 = 0, i, j;
 	char *ptr;
 
-    if (s1 ==  NULL)
-        s1 = "";
-    if (s2 == NULL)
-        s2 = "";
-    
-    sizeS1 = sizePtr(s1);
-    sizeS2 = sizePtr(s2);
+	if (s1 ==  NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	sizeS1 = sizePtr(s1);
+	sizeS2 = sizePtr(s2);
 
 
-    if (n > sizeS2)
-        n = sizeS2;
+	if (n > sizeS2)
+		n = sizeS2;
 
-    ptr = malloc(((sizeS1 + n) + 1) * sizeof(char));
+	ptr = malloc(((sizeS1 + n) + 1) * sizeof(char));
 
-    if (ptr == NULL)
-        free(ptr);
-        return (NULL);
+	if (ptr == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
 
-    for (i = 0; i < sizeS1; i++)
-    {
-        ptr[i] = s1[i];
-    }
+	for (i = 0; i < sizeS1; i++)
+	{
+		ptr[i] = s1[i];
+	}
 
-    for (j = i; j < (sizeS1 + n); j++)
-    {
-        ptr[j] = s2[j - i];
-    }
+	for (j = i; j < (sizeS1 + n); j++)
+	{
+		ptr[j] = s2[j - i];
+	}
 
-    ptr[j] = '\0';
-
-    return (ptr);
+	ptr[j] = '\0';
+	return (ptr);
 
 }
