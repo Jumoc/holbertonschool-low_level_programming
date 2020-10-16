@@ -20,16 +20,16 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	size = max - min;
+	size = max - min + 1;
 
-	ptr = malloc(size * sizeof(int) + 1);
+	ptr = malloc(size * sizeof(int));
 
 	if (ptr == NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	for (i = 0; i < size + 1; i++)
+	for (i = 0; i < size; i++)
 	{
 		ptr[i] = min;
 		min++;
