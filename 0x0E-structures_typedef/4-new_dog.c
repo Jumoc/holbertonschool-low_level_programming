@@ -33,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int sizeName, sizeOwner, i;
 
 	if (name == NULL || owner ==  NULL)
-		return (NULL);
+		exit (-1);
 
 	sizeName = sizePtr(name);
 	sizeOwner = sizePtr(owner);
