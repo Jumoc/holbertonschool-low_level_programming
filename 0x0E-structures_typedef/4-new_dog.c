@@ -1,7 +1,6 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * sizePtr - gets the size of a char pointer
  * @str: char pointer
@@ -18,7 +17,6 @@ int sizePtr(char *str)
 	}
 	return (size + 1);
 }
-
 /**
  * new_dog - creates a new doggo
  * @name: name of doggo
@@ -36,10 +34,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		name = "";
 	if (owner == NULL)
 		owner = "";
-
 	sizeName = sizePtr(name);
 	sizeOwner = sizePtr(owner);
-
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 	{
@@ -51,25 +47,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog->name == NULL)
 	{
 		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
 	dog->owner = malloc(sizeOwner * sizeof(char));
 	if (dog->owner == NULL)
 	{
 		free(dog->owner);
+		free(dog);
 		return (NULL);
 	}
-
 	for (i = 0; i < sizeName; i++)
 	{
 		dog->name[i] = name[i];
 	}
-
 	for (i = 0; i < sizeOwner; i++)
 	{
 		dog->owner[i] = owner[i];
 	}
-
 	return (dog);
-
 }
