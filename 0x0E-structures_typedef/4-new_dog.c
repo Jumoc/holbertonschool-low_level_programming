@@ -32,23 +32,32 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *dog;
 	int sizeName, sizeOwner, i;
 
-	if (name == NULL || owner ==  NULL)
-		exit(-1);
+	if (name == NULL)
+		name = "";
+	if (owner == NULL)
+		owner = "";
 
 	sizeName = sizePtr(name);
 	sizeOwner = sizePtr(owner);
 
 	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
 	dog->age = age;
 	dog->name = malloc(sizeName * sizeof(char));
-	dog->owner = malloc(sizeOwner * sizeof(char));
-
-	if (dog->name == NULL || dog == NULL || dog->owner == NULL || age < 0)
+	if (dog->name == NULL)
 	{
 		free(dog->name);
+		return (NULL);
+	}
+	dog->owner = malloc(sizeOwner * sizeof(char));
+	if (dog->owner == NULL)
+	{
 		free(dog->owner);
-		free(dog);
-		exit(-1);
+		return (NULL);
 	}
 
 	for (i = 0; i < sizeName; i++)
