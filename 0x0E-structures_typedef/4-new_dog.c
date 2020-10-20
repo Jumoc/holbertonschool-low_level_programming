@@ -33,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int sizeName, sizeOwner, i;
 
 	if (name == NULL || owner ==  NULL)
-		exit (-1);
+		exit(-1);
 
 	sizeName = sizePtr(name);
 	sizeOwner = sizePtr(owner);
@@ -48,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog->name);
 		free(dog->owner);
 		free(dog);
-		return (NULL);
+		exit(-1);
 	}
 
 	for (i = 0; i < sizeName; i++)
