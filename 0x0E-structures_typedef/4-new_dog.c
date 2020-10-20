@@ -32,11 +32,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *dog;
 	int sizeName, sizeOwner, i;
 
-	sizeName = sizePtr(name);
-	sizeOwner = sizePtr(owner);
-
 	if (name == NULL || owner ==  NULL)
 		return (NULL);
+
+	sizeName = sizePtr(name);
+	sizeOwner = sizePtr(owner);
 
 	dog = malloc(sizeof(dog_t));
 	dog->age = age;
