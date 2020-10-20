@@ -35,12 +35,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	sizeName = sizePtr(name);
 	sizeOwner = sizePtr(owner);
 
+	if (name == NULL || owner ==  NULL)
+		return (NULL);
+
 	dog = malloc(sizeof(dog_t));
 	dog->age = age;
 	dog->name = malloc(sizeName * sizeof(char));
 	dog->owner = malloc(sizeOwner * sizeof(char));
 
-	if (dog->name == NULL || dog == NULL || age < 0)
+	if (dog->name == NULL || dog == NULL)
 	{
 		free(dog->name);
 		free(dog);
