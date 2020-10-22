@@ -20,7 +20,6 @@ int main(int argv, char **argc)
 
 	if (argv != 4 || op == NULL)
 	{
-		free(op);
 		printf("Error\n");
 		exit(98);
 	}
@@ -33,7 +32,6 @@ int main(int argv, char **argc)
 
 	if (operation == NULL)
 	{
-		free(op);
 		printf("Error\n");
 		exit(99);
 	}
