@@ -35,7 +35,7 @@ int main(int argv, char **argc)
 	if ((argc[2][0] == '/' || argc[2][0] == '%') && b == 0)
 	{
 		printf("Error\n");
-		exit(100); 
+		exit(100);
 	}
 
 	result = operation(a, b);
