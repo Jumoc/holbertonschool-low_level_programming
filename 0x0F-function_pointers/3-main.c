@@ -14,21 +14,17 @@ int main(int argv, char **argc)
 {
 	int (*operation)(int, int);
 	int a, b, result;
-	char *op;
 
-	op = malloc(sizeof(char));
-
-	if (argv != 4 || op == NULL)
+	if (argv != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
 	a = atoi(argc[1]);
-	op = argc[2];
 	b = atoi(argc[3]);
 
-	operation = get_op_func(op);
+	operation = get_op_func(argc[2]);
 
 	if (operation == NULL)
 	{
@@ -36,7 +32,7 @@ int main(int argv, char **argc)
 		exit(99);
 	}
 
-	if ((*op == '/' || *op == '%') && b == 0)
+	if ((argc[2][0] == '/' || argc[2][0] == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
