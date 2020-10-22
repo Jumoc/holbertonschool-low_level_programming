@@ -3,8 +3,7 @@
 /**
  * get_op_func - operates two numbers
  *
- * @a: first numbers
- * @b: second number
+ * @s: caracter operator
  *
  * Return: result of the operation.
  */
