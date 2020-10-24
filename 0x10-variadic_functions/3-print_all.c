@@ -33,14 +33,14 @@ void print_all(const char * const format, ...)
 	int i = 0, j;
 	va_list args;
 
-	va_start(args, format);
-
 	print arr[] = {
 		{'c', printC},
 		{'i', printInt},
 		{'f', printFloat},
 		{'s', printString}
 	};
+
+	va_start(args, format);
 
 	while (format[i] != '\0')
 	{
