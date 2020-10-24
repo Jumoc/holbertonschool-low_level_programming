@@ -3,6 +3,13 @@
 
 #include <stdarg.h>
 
+/**
+ * struct print - struct to print any type of string
+ *
+ * @type: type of format
+ * @f: function that prints
+ *
+ */
 typedef struct print
 {
 	char type;
