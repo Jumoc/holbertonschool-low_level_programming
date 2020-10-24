@@ -1,30 +1,58 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 
+/**
+ * printC - prints strings, followed by a new line.
+ *
+ * @arg: list of arguments
+ *
+ * Return: void.
+ */
 void printC(va_list arg)
 {
 	printf("%c", va_arg(arg, int));
 }
 
+/**
+ * printInt - prints strings, followed by a new line.
+ *
+ * @arg: list of arguments
+ *
+ * Return: void.
+ */
 void printInt(va_list arg)
 {
 	printf("%d", va_arg(arg, int));
 }
 
+/**
+ * printFloat - prints strings, followed by a new line.
+ *
+ * @arg: list of arguments
+ *
+ * Return: void.
+ */
 void printFloat(va_list arg)
 {
 	printf("%f", va_arg(arg, double));
 }
 
+/**
+ * printString - prints strings, followed by a new line.
+ *
+ * @arg: list of arguments
+ *
+ * Return: void.
+ */
 void printString(va_list arg)
 {
 	printf("%s", va_arg(arg, char *));
 }
 
 /**
- * prints anything - prints strings, followed by a new line.
+ * print_all - prints strings, followed by a new line.
  *
- * @format: size of args
+ * @format: format to be printed
  *
  * Return: void.
  */
