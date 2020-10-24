@@ -46,7 +46,12 @@ void printFloat(va_list arg)
  */
 void printString(va_list arg)
 {
-	printf("%s", va_arg(arg, char *));
+	char *string = va_arg(arg, char *);
+
+	if(string != NULL)
+		printf("%s", string);
+	else
+		printf("(nil)");
 }
 
 /**
@@ -78,7 +83,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == arr[j].type)
 			{
 				arr[j].f(args);
-				if (format[i + 1] != '\0')
+				if(format[i + 1] != '\0')
 					printf(", ");
 				break;
 			}
