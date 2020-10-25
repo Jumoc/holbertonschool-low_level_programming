@@ -47,7 +47,8 @@ void printFloat(va_list arg)
 void printString(va_list arg)
 {
 	char *string = va_arg(arg, char *);
-	if(string == NULL)
+
+	if (string == NULL)
 		string = "(nil)";
 
 	printf("%s", string);
@@ -82,12 +83,13 @@ void print_all(const char * const format, ...)
 			if (format[i] == arr[j].type)
 			{
 				arr[j].f(args);
+
 				/*little cheat*/
 				switch (format[i + 1])
 				{
 				case '\0':
 					break;
-				
+
 				default:
 					printf(", ");
 					break;
