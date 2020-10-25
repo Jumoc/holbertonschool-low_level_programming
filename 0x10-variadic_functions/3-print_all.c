@@ -47,10 +47,10 @@ void printFloat(va_list arg)
 void printString(va_list arg)
 {
 	char *string = va_arg(arg, char *);
-	if(string != NULL)
-		printf("%s", string);
-	else
-		printf("(nil)");
+	if(string == NULL)
+		string = "(nil)";
+
+	printf("%s", string);
 }
 
 /**
