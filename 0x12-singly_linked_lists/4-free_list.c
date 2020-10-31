@@ -23,28 +23,27 @@ size_t list_len(const list_t *h)
 }
 
 /**
- * add_node_end - adds a node to a list
+ * free_list - frees a list
  *
  * @head: header of the singly linked list
- * @str: string to add to the node
  *
- * Return: the head
+ * Return: void
  */
 void free_list(list_t *head)
 {
-        list_t *current = head;
-        size_t size, i, j;
+	list_t *current = head;
+	size_t size, i, j;
 
-        size = list_len(head);
+	size = list_len(head);
 
-        for (i = 0; i < size; i++)
-        {
-                current = head;
-                for (j = 0; j < (size - i); j++)
-                {
-                        current = current->next;
-                }
-                free(current);
-        }
-        free(head);
+	for (i = 0; i < size; i++)
+	{
+		current = head;
+		for (j = 0; j < (size - i - 1); j++)
+		{
+			current = current->next;
+		}
+		free(current->str);
+		free(current);
+	}
 }
