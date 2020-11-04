@@ -31,6 +31,9 @@ size_t _listint_len(const listint_t *h)
 
 listint_t *reverse_listint(listint_t **head)
 {
+	listint_t *current;
+	listint_t *aux;
+
 	if ((*head) == NULL)
 	{
 		return (NULL);
@@ -41,8 +44,8 @@ listint_t *reverse_listint(listint_t **head)
 		return (*head);
 	}
 
-	listint_t *current = (*head)->next;
-	listint_t *aux = current->next;
+	current = (*head)->next;
+	aux = current->next;
 
 	(*head)->next = NULL;
 
