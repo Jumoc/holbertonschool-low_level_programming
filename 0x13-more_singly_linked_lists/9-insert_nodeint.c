@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - pops the head of the list and returns its value
+ * insert_nodeint_at_index - pops the head of the list and returns its value
  *
  * @head: header of the singly linked list
  * @idx: nth node to get
