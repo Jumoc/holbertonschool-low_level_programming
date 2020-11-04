@@ -1,14 +1,14 @@
 #include "lists.h"
 
 /**
- * listint_len - returns the size of a list
+ * _listint_len - returns the size of a list
  *
  * @h: header of the singly linked list
  *
  * Return: number of nodes
  */
 
-size_t listint_len(const listint_t *h)
+size_t _listint_len(const listint_t *h)
 {
 	size_t i = 0;
 	const listint_t *current = h;
@@ -43,7 +43,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!newNode)
 		return (NULL);
 
-	size = listint_len(*head);
+	size = _listint_len(*head);
 
 	if (idx > size)
 		return (NULL);
