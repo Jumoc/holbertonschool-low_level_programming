@@ -1,6 +1,27 @@
 #include "lists.h"
 
 /**
+ * _listint_len - returns the size of a list
+ *
+ * @h: header of the singly linked list
+ *
+ * Return: number of nodes
+ */
+
+size_t _listint_len(const listint_t *h)
+{
+	size_t i = 0;
+	const listint_t *current = h;
+
+	while (current != NULL)
+	{
+		i++;
+		current = current->next;
+	}
+	return (i);
+}
+
+/**
  * delete_nodeint_at_index - deletes a node at a given index
  *
  * @head: header of the singly linked list
@@ -15,7 +36,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *current = *head;
 	listint_t *aux;
 
-	size = listint_len(*head);
+	size = _listint_len(*head);
 
 	if (index > (size - 1) || !(*head))
 		return (-1);
