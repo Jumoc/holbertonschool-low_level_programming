@@ -39,11 +39,10 @@ void free_listint(listint_t *head)
 	for (i = 0; i < size; i++)
 	{
 		current = head;
-		for (j = 0; j < (size - i); j++)
+		for (j = 0; j < (size - i - 1); j++)
 			current = current->next;
 		free(current);
 	}
-	free(head);
 }
 
 /**
