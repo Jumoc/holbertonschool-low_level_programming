@@ -22,30 +22,6 @@ size_t listint_len(const listint_t *h)
 }
 
 /**
- * free_listint - frees a singly linked list
- *
- * @head: header of the singly linked list
- *
- * Return: number of nodes
- */
-
-void free_listint(listint_t *head)
-{
-	listint_t *current;
-	int size, i, j;
-
-	size = listint_len(head);
-
-	for (i = 0; i < size; i++)
-	{
-		current = head;
-		for (j = 0; j < (size - i - 1); j++)
-			current = current->next;
-		free(current);
-	}
-}
-
-/**
  * free_listint2 - frees a singly linked list and sets the head to null
  *
  * @head: header of the singly linked list
@@ -54,10 +30,13 @@ void free_listint(listint_t *head)
  */
 void free_listint2(listint_t **head)
 {
-	if (head || *head)
+	listint_t *current;
+	current = *head;
+	while(*head && head)
 	{
-		free_listint((*head));
-		head = NULL;
+		(*head) = (*head)->next;
+		free(current);
+		current = *head;
 	}
 	*head = NULL;
 }
