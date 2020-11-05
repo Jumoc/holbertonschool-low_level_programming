@@ -31,8 +31,13 @@ size_t listint_len(const listint_t *h)
 void free_listint2(listint_t **head)
 {
 	listint_t *current;
+
+	if (!head)
+		return;
+
 	current = *head;
-	while(*head && head)
+
+	while(*head)
 	{
 		(*head) = (*head)->next;
 		free(current);
