@@ -39,11 +39,6 @@ listint_t *reverse_listint(listint_t **head)
 		return (NULL);
 	}
 
-	if (_listint_len(*head) == 1)
-	{
-		return (*head);
-	}
-
 	current = (*head)->next;
 	aux = current->next;
 
@@ -61,5 +56,4 @@ listint_t *reverse_listint(listint_t **head)
 	(*head) = current;
 
 	return (*head);
-
 }
