@@ -1,21 +1,22 @@
 #include "holberton.h"
 
 /**
- * print_binary - prints a decimal number to binary;
+ * get_bit - gets the nth bit of a number
  * @n: number to convert
- * Return: void
+ * @index: bit to get
+ * Return: 1 or 0
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int k;
 
-        k = 1 << index;
+	k = 1 << index;
 
-        if (index >= 63)
-                return (-1);
+	if (index >= 63)
+		return (-1);
 
-        if ((n & k) != 0)
-                return (1);
-        else
-                return (0);
+	if ((n & k) != 0)
+		return (1);
+	else
+		return (0);
 }
