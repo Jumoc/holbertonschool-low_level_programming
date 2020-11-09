@@ -17,7 +17,7 @@ int _strlen(char *buffer)
 }
 
 /**
- * create_file - creates a files and puts text in it
+ * append_text_to_file - appends text to the end of file
  * @filename: name of the file
  * @text_content: text that the file is going to contain
  *
