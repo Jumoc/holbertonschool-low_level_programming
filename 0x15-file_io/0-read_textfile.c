@@ -28,7 +28,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	readen = read(fd, buffer, letters);
 
-	write(1, buffer, readen);
+	write(STDOUT_FILENO, buffer, readen);
 	close(fd);
+
+	if (readen < letters)
+		return (0);
+
 	return (readen);
 }
