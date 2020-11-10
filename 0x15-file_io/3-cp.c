@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * main - copies text from one file to another
@@ -48,4 +49,6 @@ int main(int argv, char **argc)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
+
+	return (1);
 }
