@@ -13,7 +13,7 @@ int copy_files(int file1, int file2, char *buffer)
 {
 	while (read(file1, buffer, 1024) > 0)
 	{
-		if (dprintf(file2, "%s", buffer) < 0)
+		if (write(file2, buffer, 1024) < 0)
 		{
 			return (-1);
 		}
