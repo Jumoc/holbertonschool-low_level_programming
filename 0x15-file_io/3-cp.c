@@ -2,6 +2,39 @@
 #include <stdio.h>
 
 /**
+ * copy_files - copies text from one file to another
+ * @file1: src
+ * @file2: dest
+ * @buffer: buffer
+ *
+ * Return: 1 on success -1 otherwise
+ */
+int copy_files(int file1, int file2, char *buffer)
+{
+	while (read(file1, buffer, 1024) > 0)
+	{
+		if (dprintf(file2, "%s", buffer) < 0)
+		{
+			return (-1);
+		}
+	}
+
+	if (close(file1) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1);
+		exit(100);
+	}
+	if (close(file2) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file2);
+		exit(100);
+	}
+
+	return (1);
+
+}
+
+/**
  * main - copies text from one file to another
  * @argv: number of arguments
  * @argc: arguments
@@ -36,18 +69,14 @@ int main(int argv, char **argc)
 	if (!buffer)
 		exit(-1);
 
-	read(fd1, buffer, 1024);
-	dprintf(fd2, "%s", buffer);
-	if (close(fd2) == -1)
+	if (copy_files(fd1, fd2, buffer) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s", argc[2]);
+		free(buffer);
+		exit(99);
 	}
-	if (close(fd1) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-		exit(100);
-	}
+
+	free(buffer);
 
 	return (1);
 }
