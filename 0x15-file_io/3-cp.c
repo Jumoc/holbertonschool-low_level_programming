@@ -65,7 +65,7 @@ int main(int argv, char **argc)
 		exit(99);
 	}
 
-	buffer = malloc(1024 * sizeof(char));
+	buffer = malloc(BUFSIZ);
 	if (!buffer)
 		exit(-1);
 
