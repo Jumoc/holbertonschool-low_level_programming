@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * dlistint_len - counts the number of nodes
+ * list_len - counts the number of nodes
  * @h: head
  * Return: number of nodes
 */
-size_t dlistint_len(const dlistint_t *h)
+size_t list_len(const dlistint_t *h)
 {
 	size_t size = 0;
 	const dlistint_t *current;
@@ -35,7 +35,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *current;
 	unsigned int count = 0;
 
-	if (!*head || (index > (dlistint_len(*head) - 1)))
+	if (!*head || (index > (list_len(*head) - 1)))
 		return (-1);
 
 	current = *head;
