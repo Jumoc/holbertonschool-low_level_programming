@@ -1,12 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get - retrieves a value assosiated with a key
+ * hash_table_print - prints a hashtable
  *
  * @ht: header of the singly linked list
- * @key: data of the node
  *
- * Return: value
+ * Return: void
  */
 
 void hash_table_print(const hash_table_t *ht)
