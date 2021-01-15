@@ -1,10 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - creates a hash table of a given size
+ * key_index - hashes an index
  *
- * @str: size of the hash table
- * Return: returns the hashtable
+ * @size: size of the hash table
+ * @key: key
+ * Return: returns the index
 */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
