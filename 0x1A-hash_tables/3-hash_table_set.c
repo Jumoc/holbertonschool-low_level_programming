@@ -39,6 +39,7 @@ hash_node_t *create_node(const char *key, const char *value)
 
 hash_node_t *add_node(hash_node_t **head, hash_node_t *node)
 {
+	node->next = *head;
 	*head = node;
 
 	return (*head);
@@ -68,7 +69,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!(ht->array[idx]))
 		ht->array[idx] = node;
 	else
-		add_node(&(ht->array[idx]), node);
+		if (strcmp(ht->array[idx]->key, key) == 0)
+		{
+			free(ht->array[idx]->value);
+			ht->array[idx]->value = malloc(strlen(value) + 1 * sizeof(char));
+			strcpy(ht->array[idx]->value, value);
+		}
+		else
+			add_node(&(ht->array[idx]), node);
 
 	return (1);
 }
