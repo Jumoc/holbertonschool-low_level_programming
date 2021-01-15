@@ -69,6 +69,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!(ht->array[idx]))
 		ht->array[idx] = node;
 	else
+	{
 		current = ht->array[idx];
 		while (current)
 		{
@@ -83,8 +84,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				strcpy(current->value, value);
 				return (1);
 			}
+			current = current->next;
 		}
-		add_node(ht->array[idx], node);
-
+		add_node(&(ht->array[idx]), node);
+	}
 	return (1);
 }
