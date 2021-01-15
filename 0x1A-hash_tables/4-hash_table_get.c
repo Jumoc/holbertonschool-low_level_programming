@@ -14,6 +14,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int idx = 0;
 	hash_node_t *node, *current;
 
+	if (!ht || !key)
+		return (NULL);
+
 	idx = key_index((unsigned char *) key, ht->size);
 	node = ht->array[idx];
 
@@ -21,17 +24,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	if (strcmp(node->key, key) == 0)
-	{
 		return (node->value);
-	} else
+
+	current = node->next;
+	while (current != NULL)
 	{
-		current = node->next;
-		while (current != NULL)
-		{
-			if (strcmp(current->key, key) == 0)
-				return (current->value);
-			current = current->next;
-		}
-		return (NULL);
+		if (strcmp(current->key, key) == 0)
+			return (current->value);
+		current = current->next;
 	}
+	return (NULL);
 }
