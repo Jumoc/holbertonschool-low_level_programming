@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""Module that checks the perimeter of an island"""
+
 
 def check_surrownding(grid, x, y):
+    """Checks surrounding for every land zone"""
     acum = 0
     # Check on its left
     try:
@@ -29,6 +32,7 @@ def check_surrownding(grid, x, y):
     return acum
 
 def island_perimeter(grid):
+    """Return the island's perimeter"""
     perimeter = 0
     for row in range(len(grid)):
         for col in range(len(grid[row])):
