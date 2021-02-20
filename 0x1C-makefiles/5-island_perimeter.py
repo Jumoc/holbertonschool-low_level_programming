@@ -28,9 +28,7 @@ def check_surrownding(grid, x, y):
         if grid[x + 1][y] == 0:
             acum += 1
     except:
-        print("except4")
         acum += 1
-    print(f"{x}, {y}: {acum}")
     return acum
 
 
