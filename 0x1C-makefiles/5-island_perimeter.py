@@ -31,6 +31,7 @@ def check_surrownding(grid, x, y):
         pass
     return acum
 
+
 def island_perimeter(grid):
     """Return the island's perimeter"""
     perimeter = 0
