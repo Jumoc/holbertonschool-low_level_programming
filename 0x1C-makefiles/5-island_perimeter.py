@@ -5,6 +5,18 @@
 def check_surrownding(grid, x, y):
     """Checks surrounding for every land zone"""
     acum = 0
+    # Check on its bottom
+    if y - 1 >= 0:
+        if (grid[x][y - 1]) == 0:
+            acum += 1
+    else:
+        acum += 1
+    # Check on the top
+    try:
+        if grid[x][y + 1] == 0:
+            acum += 1
+    except:
+        acum += 1
     # Check on its left
     try:
         if grid[x - 1][y] == 0:
@@ -15,20 +27,10 @@ def check_surrownding(grid, x, y):
     try:
         if grid[x + 1][y] == 0:
             acum += 1
-    except BaseException:
+    except:
+        print("except4")
         acum += 1
-    # Check on the top
-    try:
-        if grid[x][y + 1] == 0:
-            acum += 1
-    except BaseException:
-        acum += 1
-    # Check on its bottom
-    try:
-        if grid[x][y - 1] == 0:
-            acum += 1
-    except BaseException:
-        acum += 1
+    print(f"{x}, {y}: {acum}")
     return acum
 
 
