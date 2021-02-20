@@ -5,7 +5,7 @@ NAME = holberton
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(SRC) m.h
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 main.o: main.c m.h
