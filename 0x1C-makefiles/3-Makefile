@@ -17,4 +17,4 @@ fclean:
 	$(RM) -f *~ $(NAME) $(OBJ)
 
 re: $(OBJ)
-	$(RM) -f *~ $(NAME) $(OBJ) ; $(CC) $(OBJ) -o $(NAME)
+	$(RM) -f *~ $(NAME) $(OBJ) ; $(CC) $(SRC) -o $(NAME)
