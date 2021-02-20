@@ -10,25 +10,25 @@ def check_surrownding(grid, x, y):
         if grid[x - 1][y] == 0:
             acum += 1
     except:
-        pass
+        acum += 1
     # Check on the right
     try:
         if grid[x + 1][y] == 0:
             acum += 1
     except:
-        pass
+        acum += 1
     # Check on the top
     try:
         if grid[x][y + 1] == 0:
             acum += 1
     except:
-        pass
+        acum += 1
     # Check on its bottom
     try:
         if grid[x][y - 1] == 0:
             acum += 1
     except:
-        pass
+        acum += 1
     return acum
 
 
