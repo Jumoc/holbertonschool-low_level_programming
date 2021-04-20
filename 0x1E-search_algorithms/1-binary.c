@@ -1,17 +1,25 @@
 #include "search_algos.h"
 
+/**
+ * print_array - prints an array given a start and an end
+ * @array: array
+ * @l: start of the array
+ * @r: end of the array
+ *
+ * Return: void
+ */
 void print_array(int *array, size_t l, size_t r)
 {
-    size_t i;
+	size_t i;
 
-    printf("Searching in array: ");
-    for (i = l; i <= r; i++)
-    {
-        printf("%d", array[i]);
-        if (i < r)
-            printf(", ");
-    }
-    printf("\n");
+	printf("Searching in array: ");
+	for (i = l; i <= r; i++)
+	{
+		printf("%d", array[i]);
+		if (i < r)
+			printf(", ");
+	}
+	printf("\n");
 }
 
 /**
@@ -25,23 +33,23 @@ void print_array(int *array, size_t l, size_t r)
 int binary_search(int *array, size_t size, int value)
 {
 	size_t l = 0, r;
-    int mid;
+	int mid;
 
-    r = size - 1;
+	r = size - 1;
 
-    while (l < r)
-    {
-        print_array(array, l, r);
-        mid = (l + r) / 2;
+	while (l < r)
+	{
+		print_array(array, l, r);
+		mid = (l + r) / 2;
 
-        if (value == array[mid])
-            return (mid);
-        else if (value < array[mid])
-            r =  mid - 1;
-        else
-            l = mid + 1;
-    }
-    print_array(array, l, r);
-    return (-1);
+		if (value == array[mid])
+			return (mid);
+		else if (value < array[mid])
+			r =  mid - 1;
+		else
+			l = mid + 1;
+	}
+	print_array(array, l, r);
+	return (-1);
 }
 
